@@ -10,6 +10,17 @@
 
 @implementation XLCustomCell1
 
++ (XLCustomCell1 *)customCellWithTableView:(UITableView *)tableView {
+    static NSString *ID = @"XLCustomCell1";
+    
+    XLCustomCell1 *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (cell == nil) {
+        cell = [[NSBundle mainBundle] loadNibNamed:@"XLCustomCell1" owner:nil options:nil].lastObject;
+    }
+    return cell;
+}
+
+
 - (void)awakeFromNib {
     // Initialization code
 }

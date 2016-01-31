@@ -4,51 +4,47 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="XLCustomCell1">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="XLCustomCell1" id="KGk-i7-Jjw" customClass="XLCustomCell1">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="199.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="199.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="XL.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fqE-qC-V8j">
+                        <rect key="frame" x="10" y="10" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="fqE-qC-V8j" secondAttribute="height" multiplier="1:1" id="aLL-UW-ATh"/>
+                        </constraints>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3C-Kg-HPW">
-                        <rect key="frame" x="10" y="120" width="300" height="69.5"/>
+                        <rect key="frame" x="10" y="120" width="394" height="69.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="XL.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fqE-qC-V8j">
-                        <rect key="frame" x="10" y="10" width="100" height="100"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="fqE-qC-V8j" secondAttribute="height" multiplier="1:1" id="7dI-q4-vRH"/>
-                        </constraints>
-                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="o3C-Kg-HPW" secondAttribute="bottom" constant="10" id="8wa-Dp-fbs"/>
-                    <constraint firstItem="fqE-qC-V8j" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="BfF-oG-e5B"/>
-                    <constraint firstItem="o3C-Kg-HPW" firstAttribute="top" secondItem="fqE-qC-V8j" secondAttribute="bottom" constant="10" id="BsV-im-hIF"/>
-                    <constraint firstAttribute="bottom" secondItem="fqE-qC-V8j" secondAttribute="bottom" priority="500" constant="10" id="En2-Ra-oRA"/>
-                    <constraint firstAttribute="bottom" secondItem="fqE-qC-V8j" secondAttribute="bottom" priority="750" constant="10" id="HjG-GD-8Ww"/>
-                    <constraint firstItem="o3C-Kg-HPW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Lbb-0m-6tg"/>
-                    <constraint firstAttribute="trailing" secondItem="fqE-qC-V8j" secondAttribute="trailing" constant="210" id="Q8v-ps-xeP"/>
-                    <constraint firstItem="fqE-qC-V8j" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="c4t-89-fuR"/>
-                    <constraint firstAttribute="trailing" secondItem="o3C-Kg-HPW" secondAttribute="trailing" constant="10" id="eRI-54-TNg"/>
+                    <constraint firstAttribute="trailing" secondItem="o3C-Kg-HPW" secondAttribute="trailing" constant="10" id="2uL-sH-o52"/>
+                    <constraint firstItem="o3C-Kg-HPW" firstAttribute="top" secondItem="fqE-qC-V8j" secondAttribute="bottom" constant="10" id="4Lb-8e-Rfq"/>
+                    <constraint firstItem="fqE-qC-V8j" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="66S-2O-E7g"/>
+                    <constraint firstItem="o3C-Kg-HPW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="6cV-DF-vom"/>
+                    <constraint firstAttribute="bottom" secondItem="o3C-Kg-HPW" secondAttribute="bottom" constant="10" id="VyA-LW-Kbt"/>
+                    <constraint firstItem="fqE-qC-V8j" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="100:414" id="XpT-52-xiI"/>
+                    <constraint firstAttribute="bottom" secondItem="fqE-qC-V8j" secondAttribute="bottom" priority="500" constant="10" id="owy-gV-Rda"/>
+                    <constraint firstItem="fqE-qC-V8j" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="wtz-2T-9tg"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="HjG-GD-8Ww"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
             <connections>
-                <outlet property="imageBotton" destination="BsV-im-hIF" id="0iw-bg-CHL"/>
+                <outlet property="imageBotton" destination="4Lb-8e-Rfq" id="w5w-CS-hls"/>
                 <outlet property="label" destination="o3C-Kg-HPW" id="Yrm-EA-gFe"/>
             </connections>
+            <point key="canvasLocation" x="251" y="194"/>
         </tableViewCell>
     </objects>
     <resources>

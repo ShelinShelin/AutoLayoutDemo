@@ -27,7 +27,7 @@
 - (NSMutableArray *)dataArray {
     if (!_dataArray) {
         _dataArray = [NSMutableArray array];
-        NSString *tempStr;
+        NSString *tempStr = @"嘻嘻";
         for (int i = 0; i < 50; i ++ ) {
             NSString *str = [NSString stringWithFormat:@"嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻%@",tempStr];
             tempStr = str;
@@ -40,7 +40,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
     self.example1TableView.estimatedRowHeight = 100;
 }
 
@@ -54,15 +53,14 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    XLCustomCell1 *cell = [[NSBundle mainBundle] loadNibNamed:@"XLCustomCell1" owner:nil options:nil].lastObject;
+    XLCustomCell1 *cell = [XLCustomCell1 customCellWithTableView:tableView];
     cell.label.text = self.dataArray[indexPath.row];
-
-    cell.label.hidden = NO;
-    if (cell.label.hidden == YES) {
-        cell.imageBotton.priority = 500;
-    }else {
-        cell.imageBotton.priority = 1000;
-    }
+    
+    int x = arc4random() % 100;
+    
+    cell.label.hidden = x % 2 == 0 ? YES : NO;
+    cell.imageBotton.priority = cell.label.hidden ? UILayoutPriorityDefaultLow : UILayoutPriorityDefaultHigh;
+    
     return cell;
 }
 @end

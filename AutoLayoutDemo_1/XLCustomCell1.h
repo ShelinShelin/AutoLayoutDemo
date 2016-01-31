@@ -13,4 +13,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageBotton;
 
++ (XLCustomCell1 *)customCellWithTableView:(UITableView *)tableView;
 @end
